@@ -33,7 +33,7 @@
                     <span class="nav-text">Contatti</span>
                 </a>
                 <a href="listino.html" class="nav-item">
-                    <span class="nav-text">Listino</span>
+                    <span class="nav-text">Disponibilità</span>
                 </a>
                 <a href="artworks.html" class="nav-item">
                     <span class="nav-text">Artworks</span>
@@ -43,46 +43,70 @@
     </header>
 
     <main>
-        <section class="hero home-hero">
-            <div class="hero-content">
-                <h1>Benvenuti a Lucashouse</h1>
-                <p class="subtitle">Natura, Relax e Tradizione sul Monte Amiata</p>
-                <a href="lacasa.html" class="cta-button">Scopri la Casa</a>
+
+
+        <!-- Text Section 1 -->
+        <section class="content-text">
+            <h2>Un'antica struttura nel cuore della Toscana</h2>
+            <p>Luca’s House e’ situata a Pescina di Seggiano, sul Monte Amiata, in Toscana. Siamo nel podere Barbaglia,
+                antica struttura contadina che risale al XIX sec., costruita interamente in pietra e ristrutturata
+                lasciando intatte le caratteristiche architettoniche rurali. E’ un piccolo borgo costituito da un
+                agriturismo e due appartamenti, per un totale di 14-18 posti, disponibile per accoglienze brevi o anche
+                per lunghi periodi.</p>
+            <p>Nella struttura si può disporre di sauna e idromassaggio, connessione WiFi sia all’interno della casa che
+                nel giardino. Sono ben accetti animali di piccola e media taglia. Il podere è situato a pochi km dalle
+                terme di S. Filippo, Bagni Vignoni e Petriolo e a poca distanza le piste invernali di sci offrono
+                svariati Km di piste attrezzate con due seggiovie e impianti di risalita.</p>
+        </section>
+
+        <!-- Gallery Section 1 -->
+        <section class="content-gallery">
+            <div class="gallery-container">
+                <div class="gallery-grid collapsed" id="gallery1">
+                    <img src="assets/1. Home/Home-s1-1.jpg" alt="Lucashouse view 1" class="gallery-img">
+                    <img src="assets/1. Home/Home-s1-2.jpg" alt="Lucashouse view 2" class="gallery-img">
+                    <img src="assets/1. Home/Home-s1-3.jpg" alt="Lucashouse view 3" class="gallery-img">
+                    <img src="assets/1. Home/Home-s1-4.jpg" alt="Lucashouse view 4" class="gallery-img">
+                    <img src="assets/1. Home/Home-s1-5.jpg" alt="Lucashouse view 5" class="gallery-img">
+                    <img src="assets/1. Home/Home-s1-6.jpg" alt="Lucashouse view 6" class="gallery-img">
+                    <img src="assets/1. Home/Home-s1-7.jpg" alt="Lucashouse view 7" class="gallery-img">
+                    <img src="assets/1. Home/Home-s1-8.jpg" alt="Lucashouse view 8" class="gallery-img">
+                    <img src="assets/1. Home/Home-s1-9.jpeg" alt="Lucashouse view 9" class="gallery-img">
+                </div>
+                <button class="show-more-btn" onclick="toggleGallery('gallery1', this)">Mostra di più</button>
             </div>
         </section>
 
-        <section class="container intro-section">
-            <div class="intro-text">
-                <h2>Un'antica struttura nel cuore della Toscana</h2>
-                <p>Luca’s House è situata a <strong>Pescina di Seggiano</strong>, sul Monte Amiata, in Toscana. Siamo
-                    nel <em>podere Barbaglia</em>, un'antica struttura contadina che risale al XIX secolo, costruita
-                    interamente in pietra e ristrutturata lasciando intatte le caratteristiche architettoniche rurali.
-                </p>
+        <!-- Text Section 2 -->
+        <section class="content-text">
+            <h2>Immersi nella Natura</h2>
+            <p>Il podere è completamente immerso nella natura, circondato dai campi coltivati biologicamente e dai
+                boschi di pini e di castagni. E’ un luogo ideale per osservare e incontrare caprioli, istrici, tassi,
+                volpi e scoiattoli, poiane, sparvieri, nugoli di lucciole e farfalle.</p>
+            <p>Ideale per appassionati di bird-watching, trekking, e mountain bike. Nelle vicinanze si pratica
+                parapendio ed equitazione. Grazie alla bellezza dei paesaggi è perfetta per organizzare Photo Tour.</p>
+        </section>
 
-                <p>È un luogo ideale per chi cerca tranquillità e contatto con la natura. Il podere è completamente
-                    immerso nel verde, circondato da campi coltivati biologicamente e da boschi di pini e di castagni.
-                </p>
+        <!-- Gallery Section 2 -->
+        <section class="content-gallery">
+            <div class="gallery-container">
+                <div class="gallery-grid collapsed" id="gallery2">
+                    <img src="assets/1. Home/Home-s2-1.jpg" alt="Nature view 1" class="gallery-img">
+                    <img src="assets/1. Home/Home-s2-2.jpg" alt="Nature view 2" class="gallery-img">
+                    <img src="assets/1. Home/Home-s2-3.jpg" alt="Nature view 3" class="gallery-img">
+                    <img src="assets/1. Home/Home-s2-4.jpg" alt="Nature view 4" class="gallery-img">
+                </div>
+                <button class="show-more-btn" onclick="toggleGallery('gallery2', this)">Mostra di più</button>
             </div>
         </section>
 
-        <section class="features-preview">
-            <div class="container">
-                <div class="feature-box">
-                    <h3>Natura</h3>
-                    <p>Ideale per osservare caprioli, istrici, volpi e scoiattoli. Perfetto per bird-watching e
-                        trekking.</p>
-                </div>
-                <div class="feature-box">
-                    <h3>Relax</h3>
-                    <p>Disponibile sauna e idromassaggio per il vostro benessere, oltre a connessione WiFi.</p>
-                </div>
-                <div class="feature-box">
-                    <h3>Dintorni</h3>
-                    <p>A pochi km dalle terme di S. Filippo, Bagni Vignoni e Petriolo, e dalle piste da sci del Monte
-                        Amiata.</p>
-                </div>
-            </div>
-        </section>
+        <!-- Lightbox Modal -->
+        <div id="lightbox" class="lightbox">
+            <span class="close" onclick="closeLightbox()">&times;</span>
+            <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
+            <img class="lightbox-content" id="lightbox-img">
+            <span class="next" onclick="changeSlide(1)">&#10095;</span>
+        </div>
     </main>
 
     <footer>
