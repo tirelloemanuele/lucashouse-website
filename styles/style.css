@@ -510,7 +510,7 @@ footer {
 
     /* Keep Navigation Horizontal */
     .accordion-nav {
-        flex-direction: row;
+        flex-direction: row !important;
         /* Force row */
         height: 150px;
         /* Reduced height for mobile */
@@ -597,7 +597,8 @@ footer {
 
 .secondary-nav {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    /* changed from center to avoid left-clipping on overflow */
     overflow-x: auto;
     padding: 1rem 0;
     margin: 0;
@@ -623,6 +624,7 @@ footer {
 
 /* Scroll Offset for anchors */
 html {
+    scroll-behavior: smooth;
     scroll-padding-top: 80px;
     /* approximative height of secondary nav */
 }
