@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apartments - Lucashouse</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid" style="padding: 1rem 0;">
+            <a href="index.html" class="logo">Lucashouse</a>
+            <span class="logo-subtitle">Monte Amiata unveiled</span>
+
+            <nav class="accordion-nav">
+                <a href="index.html" class="nav-item">
+                    <span class="nav-text">Home</span>
+                </a>
+                <a href="apartments.html" class="nav-item">
+                    <span class="nav-text">Appartamenti</span>
+                </a>
+                <a href="surroundings.html" class="nav-item">
+                    <span class="nav-text">Dintorni</span>
+                </a>
+                <a href="info.html" class="nav-item">
+                    <span class="nav-text">Info e contatti</span>
+                </a>
+                <a href="art.html" class="nav-item">
+                    <span class="nav-text">Arte e prodotti</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" style="min-height: 50vh; height: auto; padding: 4rem 0;">
+            <div class="hero-content">
+                <h1>Appartamenti</h1>
+                <p>Il podere è composto da due appartamenti indipendenti, un agriturismo, la nostra abitazione,
+                    l’annesso che ospita sauna e idromassaggio, una piccola piscina in pietra e una fuoriterra. Un forno
+                    a legna offre la possibilità di organizzare serate con pizza accompagnate da vini e birra
+                    artigianali locali. Tutto intorno il fresco giardino con svariati angoli arredati, poco oltre, i
+                    boschi.</p>
+            </div>
+        </section>
+
+        <!-- Secondary Navigation -->
+        <div class="secondary-nav-container">
+            <nav class="secondary-nav">
+                <a href="#brezza">Brezza</a>
+                <a href="#ciliegio">Ciliegio</a>
+                <a href="#petra">Petra</a>
+                <a href="#fonte">Fonte</a>
+                <a href="#relax">Relax</a>
+            </nav>
+        </div>
+
+
+
+        <section id="brezza" class="page-section container">
+            <div class="content-text">
+                <h2>Appartamento Brezza</h2>
+                <p>Costituito da una cucina, un soggiorno suddiviso in due spazi (dove è ricavata una zona letto) e
+                    un bagno al piano terra. Al piano superiore due camere da letto e un altro bagno. Totale: 4+2
+                    posti.</p>
+            </div>
+            <!-- Placeholder for Gallery -->
+            <div class="content-gallery">
+                <div class="gallery-grid">
+                    <img src="assets/nav/nav_la_casa.jpg" alt="Brezza 1" class="gallery-img">
+                    <img src="assets/nav/nav_la_casa.jpg" alt="Brezza 2" class="gallery-img">
+                </div>
+            </div>
+        </section>
+
+        <section id="ciliegio" class="page-section container">
+            <div class="content-text">
+                <h2>Appartamento Ciliegio</h2>
+                <p>Soggiorno con angolo cottura, 2 camere da letto ed un bagno con doccia. Ideale per 4-5 persone.</p>
+            </div>
+            <div class="content-gallery">
+                <div class="gallery-grid">
+                    <img src="assets/nav/nav_la_casa.jpg" alt="Ciliegio 1" class="gallery-img">
+                </div>
+            </div>
+        </section>
+
+        <section id="petra" class="page-section container">
+            <div class="content-text">
+                <h2>Appartamento Petra</h2>
+                <p>Soggiorno con termocamino, 2 stanze da letto, bagno e cucinotto. Ideale per 4+2 persone.</p>
+            </div>
+            <div class="content-gallery">
+                <div class="gallery-grid">
+                    <img src="assets/nav/nav_la_casa.jpg" alt="Petra 1" class="gallery-img">
+                </div>
+            </div>
+        </section>
+
+        <section id="fonte" class="page-section container">
+            <div class="content-text">
+                <h2>Appartamento Fonte</h2>
+                <p>Dispone di un soppalco con zona letto sopra, un piccolo soggiorno sotto con un sofa letto, angolo
+                    cottura, stufa a legna, bagno. Per 2+1 persone.</p>
+            </div>
+            <div class="content-gallery">
+                <div class="gallery-grid">
+                    <img src="assets/nav/nav_la_casa.jpg" alt="Fonte 1" class="gallery-img">
+                </div>
+            </div>
+        </section>
+
+        <section id="relax" class="page-section container">
+            <div class="content-text">
+                <h2>Relax & Benessere</h2>
+                <p><strong>Sauna, idromassaggio e piscina:</strong> La sauna (per 4-5 persone) si trova nel locale
+                    relax, insieme ad un idromassaggio per 3 persone. Poco oltre una piccola piscina per bambini e non
+                    solo...</p>
+            </div>
+            <div class="content-gallery">
+                <div class="gallery-grid">
+                    <img src="assets/nav/nav_la_casa.jpg" alt="Relax 1" class="gallery-img">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Lucashouse. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script>
+        // Active link switching for secondary nav
+        const sections = document.querySelectorAll("section");
+        const navLi = document.querySelectorAll(".secondary-nav a");
+        window.onscroll = () => {
+            var current = "";
+            sections.forEach((section) => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= sectionTop - 150) {
+                    current = section.getAttribute("id");
+                }
+            });
+            navLi.forEach((li) => {
+                li.classList.remove("active");
+                if (li.getAttribute("href").includes(current)) {
+                    li.classList.add("active");
+                }
+            });
+        };
+    </script>
+</body>
+
+</html>

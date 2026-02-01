@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info & Contacts - Lucashouse</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <style>
+        .social-links a {
+            font-size: 1.5rem;
+            margin: 0 1rem;
+            color: var(--color-terracotta);
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid" style="padding: 1rem 0;">
+            <a href="index.html" class="logo">Lucashouse</a>
+            <span class="logo-subtitle">Monte Amiata unveiled</span>
+
+            <nav class="accordion-nav">
+                <a href="index.html" class="nav-item">
+                    <span class="nav-text">Home</span>
+                </a>
+                <a href="apartments.html" class="nav-item">
+                    <span class="nav-text">Appartamenti</span>
+                </a>
+                <a href="surroundings.html" class="nav-item">
+                    <span class="nav-text">Dintorni</span>
+                </a>
+                <a href="info.html" class="nav-item">
+                    <span class="nav-text">Info e contatti</span>
+                </a>
+                <a href="art.html" class="nav-item">
+                    <span class="nav-text">Arte e prodotti</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" style="height: 50vh;">
+            <div class="hero-content">
+                <h1>Info & Contacts</h1>
+                <p class="subtitle">Prenota il tuo soggiorno</p>
+            </div>
+        </section>
+
+        <section class="container" style="padding-top: 4rem; padding-bottom: 4rem; text-align: center;">
+            <div class="contact-info"
+                style="font-size: 1.2rem; line-height: 2; border: 1px solid #ddd; padding: 2rem; display: inline-block; background: #fff; margin-bottom: 3rem;">
+                <h2>Book Now</h2>
+                <p><strong>Luca’s House - Podere Barbaglia</strong></p>
+                <p>58038 Pescina Seggiano (GR), Toscana</p>
+                <p>Tel: <a href="tel:+393388843720" style="color: var(--color-terracotta);">338 884 3720</a></p>
+                <p>Email: <a href="mailto:info@lucashouse.it"
+                        style="color: var(--color-terracotta);">info@lucashouse.it</a></p>
+            </div>
+
+            <hr
+                style="margin: 3rem auto; max-width: 200px; border-top: 2px solid var(--color-terracotta); opacity: 0.5;">
+
+            <!-- Availability Calendar -->
+            <div class="calendar-section" style="margin-bottom: 3rem;">
+                <h2>Disponibilità</h2>
+                <div
+                    style="background: #fdfbf7; padding: 2rem; border: 1px dashed #ccc; display: inline-block; width: 100%; max-width: 800px;">
+                    <p style="color: #666;">[Google Calendar Placeholder]</p>
+                    <p>Contattaci per confermare le date.</p>
+                    <!-- 
+                    <iframe src="YOUR_GOOGLE_CALENDAR_EMBED_LINK" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+                    -->
+                </div>
+            </div>
+
+            <hr
+                style="margin: 3rem auto; max-width: 200px; border-top: 2px solid var(--color-terracotta); opacity: 0.5;">
+
+            <!-- Google Map -->
+            <div class="map-section" style="margin-bottom: 3rem;">
+                <h2>Dove siamo</h2>
+                <div style="width: 100%; height: 400px; background: #eee; margin-top: 1rem;">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2936.7865245843236!2d11.5649999!3d42.9249999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13297a7a1a1a1a1a%3A0x1a1a1a1a1a1a1a1a!2sPescina%20Seggiano!5e0!3m2!1sit!2sit!4v1600000000000!5m2!1sit!2sit"
+                        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                    <!-- Revert to basic link if embed fails validation/api key needs -->
+                    <p style="margin-top: 1rem;"><a href="https://maps.app.goo.gl/DtzRwziYf6tn9GQH8" target="_blank"
+                            style="text-decoration: underline;">Apri su Google Maps</a></p>
+                </div>
+            </div>
+
+            <hr
+                style="margin: 3rem auto; max-width: 200px; border-top: 2px solid var(--color-terracotta); opacity: 0.5;">
+
+            <!-- Social Links -->
+            <div class="social-section">
+                <h2>Seguici</h2>
+                <div class="social-links" style="margin-top: 1.5rem;">
+                    <a href="#" target="_blank">Airbnb</a>
+                    <a href="#" target="_blank">Instagram</a>
+                    <a href="#" target="_blank">Facebook</a>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Lucashouse. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

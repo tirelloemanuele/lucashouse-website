@@ -87,16 +87,29 @@ function initGalleries() {
         const btn = container.querySelector('.show-more-btn');
 
         if (grid && btn) {
-            // Temporarily expand to check full height
+            // Determine state before measurement
+            const wasCollapsed = grid.classList.contains('collapsed');
+
+            // Expand to measure full content height
             grid.classList.remove('collapsed');
             const fullHeight = grid.scrollHeight;
+
+            // Re-apply collapsed state for initial check or reset
             grid.classList.add('collapsed');
 
             // If full height is less than or equal to collapsed max-height (approx 530px), hide button
-            // We use a safe threshold slightly larger than 530 to account for margin/padding
             if (fullHeight <= 540) {
                 btn.style.display = 'none';
-                grid.classList.remove('collapsed'); // Just show it all if it fits
+                grid.classList.remove('collapsed'); // Content fits, just show it
+            } else {
+                // Content exceeds limit, button needed
+                btn.style.display = 'inline-block';
+
+                // If we are resizing, we want to maintain the "Show More" functionality.
+                // Resetting to collapsed ensures the logic "never exceed 2 rows" holds true by default.
+                // If user had fully expanded it, re-collapsing on resize might be acceptable or preferred behavior for responsiveness.
+                // But for now, we ensure the correct class is present.
+                btn.textContent = "Mostra di più";
             }
         }
     });

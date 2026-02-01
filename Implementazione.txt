@@ -1,0 +1,27 @@
+Aggiornamento sezioni:
+- Home
+- Dintorni
+- Appartamenti
+- Info e contatti
+- Arte e prodotti
+
+Barra di navigazione:
+- Sempre orizzontale (anche in versione mobile)
+- Da controllare se meglio mantenere il rapporto dimensioni in mobile o se diminuire larghezza in proporzione
+
+Titolo: ridurre leggermente
+
+Struttura pagine Appartamenti / Dintorni
+- Unica pagina con accesso a singole sezioni tramite seconda barra di navigazione in alto
+- Barra di navigazione possibilmente sliding come la principale, al massimo bottoni
+- Sezioni per ciascun appartamento / luogo con testo + foto
+
+Info e contatti (da capire ordine)
+- Book now (email + telefono)
+- Disponibiltà (calendario google)
+- Mappa di google
+- Links Airbnb / Instagram / facebook
+
+Addizionali:
+Galleria foto:
+- Una solo riga quando su pc, due da mobile

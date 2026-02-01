@@ -64,8 +64,8 @@ header {
 
 .logo {
     font-family: var(--font-heading);
-    font-size: 5rem;
-    /* Increased from 3rem */
+    font-size: 3.5rem;
+    /* Decreased from 5rem */
     font-weight: 700;
     color: #8B0000;
     text-decoration: none;
@@ -508,23 +508,50 @@ footer {
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
 
-    /* Stack Navigation Vertically */
+    /* Keep Navigation Horizontal */
     .accordion-nav {
-        flex-direction: column;
-        height: auto;
-        border: none;
+        flex-direction: row;
+        /* Force row */
+        height: 150px;
+        /* Reduced height for mobile */
     }
 
     .nav-item {
-        width: 100%;
-        height: 80px;
-        border-right: none;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-        flex: none;
+        width: auto;
+        /* Let flex handle width */
+        height: 100%;
+        /* Fill container height */
+        border-right: 1px solid rgba(255, 255, 255, 0.3);
+        border-bottom: none;
+        flex: 1;
+        /* Start equal */
+        min-width: 0;
+        /* Allow shrinking */
     }
 
     .nav-item:hover {
-        flex: none;
+        flex: 4;
+        /* Expand more on mobile to see content */
+    }
+
+    /* Adjust text position for horizontal mobile bars */
+    .nav-text {
+        bottom: 1rem;
+        left: 0.5rem;
+        /* Tighter padding */
+        font-size: 0.8rem;
+        /* Smaller text */
+        opacity: 1;
+        /* Always visible if possible, or manageable */
+        writing-mode: vertical-rl;
+        /* Vertical text on mobile if very narrow? No, user said horizontal nav. */
+        /* Let's keep horizontal text but small */
+        white-space: nowrap;
+        transform: none;
+    }
+
+    .nav-item:hover .nav-text {
+        font-size: 1rem;
     }
 
     /* Adjust text position for vertical bars */
@@ -556,4 +583,56 @@ footer {
     .intro-text h2 {
         font-size: 2rem;
     }
+}
+
+/* Secondary Navigation */
+.secondary-nav-container {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--color-warm-white);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.secondary-nav {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+    padding: 1rem 0;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.secondary-nav a {
+    padding: 0.5rem 1.5rem;
+    color: var(--color-olive-dark);
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    border-radius: 20px;
+    margin: 0 0.5rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.secondary-nav a:hover,
+.secondary-nav a.active {
+    background-color: var(--color-olive-dark);
+    color: var(--color-warm-white);
+}
+
+/* Scroll Offset for anchors */
+html {
+    scroll-padding-top: 80px;
+    /* approximative height of secondary nav */
+}
+
+/* Single Page Section */
+.page-section {
+    padding: 4rem 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.page-section:last-child {
+    border-bottom: none;
 }
