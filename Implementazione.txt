@@ -1,7 +1,8 @@
-Aggiornamento sezioni:
+Aggiornamento sezioni. Queste sono le sezioni presenti da qui in avanti.
+Rinomina/elimnina/aggiungi in base a questa lista:
 - Home
-- Dintorni
 - Appartamenti
+- Dintorni
 - Info e contatti
 - Arte e prodotti
 
