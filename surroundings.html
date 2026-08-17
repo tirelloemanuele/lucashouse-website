@@ -182,6 +182,14 @@
         <p>&copy; 2026 Lucashouse. All rights reserved.</p>
     </footer>
 
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <img class="lightbox-content" id="lightbox-img">
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
+
     <script src="scripts/main.js"></script>
     <script>
         // Active link switching for secondary nav

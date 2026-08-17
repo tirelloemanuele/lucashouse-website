@@ -10,6 +10,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="styles/style.css">
 </head>
 
@@ -70,9 +71,25 @@
             </nav>
         </div>
 
-        <section id="petra" class="page-section container">
+        <section id="petra" class="page-section container apartment">
             <div class="content-text">
                 <h2>Petra</h2>
+                <p class="apartment-subtitle">Il calore autentico della pietra toscana</p>
+            </div>
+
+            <!-- 4 box icone -->
+            <div class="apartment-specs">
+                <div class="spec-box"><i class="fa-solid fa-bed"></i><span class="spec-num">2</span><span
+                        class="spec-label">Camere</span></div>
+                <div class="spec-box"><i class="fa-solid fa-couch"></i><span class="spec-num">1</span><span
+                        class="spec-label">Soggiorno</span></div>
+                <div class="spec-box"><i class="fa-solid fa-bath"></i><span class="spec-num">1</span><span
+                        class="spec-label">Bagno</span></div>
+                <div class="spec-box"><i class="fa-solid fa-utensils"></i><span class="spec-num">1</span><span
+                        class="spec-label">Cucina</span></div>
+            </div>
+
+            <div class="content-text">
                 <p>
                     L’appartamento Petra è costituito da un ampio soggiorno, 2 camere letto, un bagno, un cucinotto;
                     ideale per 4 /5 ospiti.
@@ -80,16 +97,57 @@
                     Oltre al riscaldamento con termosifoni è dotato di termo camino a legna.
                 </p>
             </div>
+
+            <!-- Servizi -->
+            <div class="apartment-services">
+                <h3>Servizi</h3>
+                <div class="service-icons">
+                    <span class="service-item"><i class="fa-solid fa-fire"></i> Termo camino a legna</span>
+                    <span class="service-item"><i class="fa-solid fa-temperature-half"></i> Riscaldamento a
+                        termosifoni</span>
+                    <span class="service-item"><i class="fa-solid fa-wifi"></i> Wi-Fi <!-- TODO confermare --></span>
+                    <span class="service-item"><i class="fa-solid fa-square-parking"></i> Parcheggio
+                        <!-- TODO confermare --></span>
+                </div>
+                <ul class="service-list">
+                    <li>Collegabile con l’appartamento Fonte (fino a 6/7 ospiti)</li>
+                    <li>Biancheria e asciugamani <!-- TODO confermare --></li>
+                    <li>Accesso a sauna, idromassaggio e piscina (comuni)</li>
+                    <li>Barbecue e forno a legna in giardino</li>
+                </ul>
+            </div>
+
+            <!-- Galleria -->
             <div class="content-gallery">
-                <div class="gallery-grid">
-                    <img src="assets/nav/nav_la_casa.jpg" alt="Petra 1" class="gallery-img">
+                <div class="gallery-container">
+                    <div class="gallery-grid collapsed" id="gallery-petra">
+                        <img src="assets/nav/nav_la_casa.jpg" alt="Petra 1" class="gallery-img">
+                        <!-- altre immagini reali da inserire -->
+                    </div>
+                    <button class="show-more-btn" onclick="toggleGallery('gallery-petra', this)">Mostra di più</button>
                 </div>
             </div>
         </section>
 
-        <section id="brezza" class="page-section container">
+        <section id="brezza" class="page-section container apartment">
             <div class="content-text">
                 <h2>Brezza</h2>
+                <p class="apartment-subtitle">Aria fresca e relax sotto il Monte Amiata</p>
+            </div>
+
+            <!-- 4 box icone -->
+            <div class="apartment-specs">
+                <div class="spec-box"><i class="fa-solid fa-bed"></i><span class="spec-num">2</span><span
+                        class="spec-label">Camere</span></div>
+                <div class="spec-box"><i class="fa-solid fa-couch"></i><span class="spec-num">1</span><span
+                        class="spec-label">Soggiorno</span></div>
+                <div class="spec-box"><i class="fa-solid fa-bath"></i><span class="spec-num">2</span><span
+                        class="spec-label">Bagni</span></div>
+                <div class="spec-box"><i class="fa-solid fa-utensils"></i><span class="spec-num">1</span><span
+                        class="spec-label">Cucina</span></div>
+            </div>
+
+            <div class="content-text">
                 <p>
                     L’appartamento Brezza è costituito da un soggiorno, suddiviso in due spazi, una ampia cucina e un
                     bagno al piano terra;
@@ -98,34 +156,116 @@
                     Oltre al riscaldamento con termosifoni e’ dotato di stufa a pellet
                 </p>
             </div>
-            <!-- Placeholder for Gallery -->
+
+            <!-- Servizi -->
+            <div class="apartment-services">
+                <h3>Servizi</h3>
+                <div class="service-icons">
+                    <span class="service-item"><i class="fa-solid fa-hot-tub-person"></i> Hot Tub a legna privata</span>
+                    <span class="service-item"><i class="fa-solid fa-fire"></i> Stufa a pellet</span>
+                    <span class="service-item"><i class="fa-solid fa-temperature-half"></i> Riscaldamento a
+                        termosifoni</span>
+                    <span class="service-item"><i class="fa-solid fa-wifi"></i> Wi-Fi <!-- TODO confermare --></span>
+                    <span class="service-item"><i class="fa-solid fa-square-parking"></i> Parcheggio
+                        <!-- TODO confermare --></span>
+                </div>
+                <ul class="service-list">
+                    <li>Giardino privato</li>
+                    <li>Biancheria e asciugamani <!-- TODO confermare --></li>
+                    <li>Accesso a sauna, idromassaggio e piscina (comuni)</li>
+                    <li>Barbecue e forno a legna in giardino</li>
+                </ul>
+            </div>
+
+            <!-- Galleria -->
             <div class="content-gallery">
-                <div class="gallery-grid">
-                    <img src="assets/nav/nav_la_casa.jpg" alt="Brezza 1" class="gallery-img">
-                    <img src="assets/nav/nav_la_casa.jpg" alt="Brezza 2" class="gallery-img">
+                <div class="gallery-container">
+                    <div class="gallery-grid collapsed" id="gallery-brezza">
+                        <img src="assets/nav/nav_la_casa.jpg" alt="Brezza 1" class="gallery-img">
+                        <img src="assets/nav/nav_la_casa.jpg" alt="Brezza 2" class="gallery-img">
+                        <!-- altre immagini reali da inserire -->
+                    </div>
+                    <button class="show-more-btn" onclick="toggleGallery('gallery-brezza', this)">Mostra di più</button>
                 </div>
             </div>
         </section>
 
-        <section id="ciliegio" class="page-section container">
+        <section id="ciliegio" class="page-section container apartment">
             <div class="content-text">
                 <h2>Ciliegio</h2>
+                <p class="apartment-subtitle">Accogliente come un frutteto in fiore</p>
+            </div>
+
+            <!-- 4 box icone -->
+            <div class="apartment-specs">
+                <div class="spec-box"><i class="fa-solid fa-bed"></i><span class="spec-num">2</span><span
+                        class="spec-label">Camere</span></div>
+                <div class="spec-box"><i class="fa-solid fa-couch"></i><span class="spec-num">1</span><span
+                        class="spec-label">Soggiorno</span></div>
+                <div class="spec-box"><i class="fa-solid fa-bath"></i><span class="spec-num">1</span><span
+                        class="spec-label">Bagno</span></div>
+                <div class="spec-box"><i class="fa-solid fa-utensils"></i><span class="spec-num">1</span><span
+                        class="spec-label">Angolo cottura</span></div>
+            </div>
+
+            <div class="content-text">
                 <p>
                     L’appartamento Ciliegio ha un soggiorno con angolo cottura, e un bagno con doccia al piano terra,
                     al piano superiore ci sono 2 camere da letto. Ideale per 4-5 ospiti
                     Oltre al riscaldamento con termosifoni e’ dotato di stufa a pellet
                 </p>
             </div>
+
+            <!-- Servizi -->
+            <div class="apartment-services">
+                <h3>Servizi</h3>
+                <div class="service-icons">
+                    <span class="service-item"><i class="fa-solid fa-fire"></i> Stufa a pellet</span>
+                    <span class="service-item"><i class="fa-solid fa-temperature-half"></i> Riscaldamento a
+                        termosifoni</span>
+                    <span class="service-item"><i class="fa-solid fa-wifi"></i> Wi-Fi <!-- TODO confermare --></span>
+                    <span class="service-item"><i class="fa-solid fa-square-parking"></i> Parcheggio
+                        <!-- TODO confermare --></span>
+                </div>
+                <ul class="service-list">
+                    <li>Biancheria e asciugamani <!-- TODO confermare --></li>
+                    <li>Accesso a sauna, idromassaggio e piscina (comuni)</li>
+                    <li>Barbecue e forno a legna in giardino</li>
+                </ul>
+            </div>
+
+            <!-- Galleria -->
             <div class="content-gallery">
-                <div class="gallery-grid">
-                    <img src="assets/nav/nav_la_casa.jpg" alt="Ciliegio 1" class="gallery-img">
+                <div class="gallery-container">
+                    <div class="gallery-grid collapsed" id="gallery-ciliegio">
+                        <img src="assets/nav/nav_la_casa.jpg" alt="Ciliegio 1" class="gallery-img">
+                        <!-- altre immagini reali da inserire -->
+                    </div>
+                    <button class="show-more-btn" onclick="toggleGallery('gallery-ciliegio', this)">Mostra di
+                        più</button>
                 </div>
             </div>
         </section>
 
-        <section id="fonte" class="page-section container">
+        <section id="fonte" class="page-section container apartment">
             <div class="content-text">
                 <h2>Fonte</h2>
+                <p class="apartment-subtitle">Intimo e raccolto, come acqua di sorgente</p>
+            </div>
+
+            <!-- 4 box icone -->
+            <div class="apartment-specs">
+                <div class="spec-box"><i class="fa-solid fa-bed"></i><span class="spec-num">1</span><span
+                        class="spec-label">Camera (soppalco)</span></div>
+                <div class="spec-box"><i class="fa-solid fa-couch"></i><span class="spec-num">1</span><span
+                        class="spec-label">Soggiorno</span></div>
+                <div class="spec-box"><i class="fa-solid fa-bath"></i><span class="spec-num">1</span><span
+                        class="spec-label">Bagno</span></div>
+                <div class="spec-box"><i class="fa-solid fa-utensils"></i><span class="spec-num">1</span><span
+                        class="spec-label">Angolo cottura</span></div>
+            </div>
+
+            <div class="content-text">
                 <p>
                     L’appartamento Fonte dispone di un soppalco con letto matrimoniale, e sotto un piccolo soggiorno con
                     un sofà letto, un angolo cottura, e il bagno, per 2-3 ospiti
@@ -133,9 +273,34 @@
                     Oltre al riscaldamento con termosifoni e’ dotato di stufa a pellet
                 </p>
             </div>
+
+            <!-- Servizi -->
+            <div class="apartment-services">
+                <h3>Servizi</h3>
+                <div class="service-icons">
+                    <span class="service-item"><i class="fa-solid fa-fire"></i> Stufa a pellet</span>
+                    <span class="service-item"><i class="fa-solid fa-temperature-half"></i> Riscaldamento a
+                        termosifoni</span>
+                    <span class="service-item"><i class="fa-solid fa-wifi"></i> Wi-Fi <!-- TODO confermare --></span>
+                    <span class="service-item"><i class="fa-solid fa-square-parking"></i> Parcheggio
+                        <!-- TODO confermare --></span>
+                </div>
+                <ul class="service-list">
+                    <li>Collegabile con l’appartamento Petra (fino a 6/7 ospiti)</li>
+                    <li>Biancheria e asciugamani <!-- TODO confermare --></li>
+                    <li>Accesso a sauna, idromassaggio e piscina (comuni)</li>
+                    <li>Barbecue e forno a legna in giardino</li>
+                </ul>
+            </div>
+
+            <!-- Galleria -->
             <div class="content-gallery">
-                <div class="gallery-grid">
-                    <img src="assets/nav/nav_la_casa.jpg" alt="Fonte 1" class="gallery-img">
+                <div class="gallery-container">
+                    <div class="gallery-grid collapsed" id="gallery-fonte">
+                        <img src="assets/nav/nav_la_casa.jpg" alt="Fonte 1" class="gallery-img">
+                        <!-- altre immagini reali da inserire -->
+                    </div>
+                    <button class="show-more-btn" onclick="toggleGallery('gallery-fonte', this)">Mostra di più</button>
                 </div>
             </div>
         </section>
@@ -159,6 +324,14 @@
     <footer>
         <p>&copy; 2026 Lucashouse. All rights reserved.</p>
     </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <img class="lightbox-content" id="lightbox-img">
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
 
     <script src="scripts/main.js"></script>
     <script>

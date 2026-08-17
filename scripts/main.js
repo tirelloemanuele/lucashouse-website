@@ -19,6 +19,7 @@ if (galleryImages.length > 0) {
 }
 
 function openLightbox(index) {
+    if (!lightbox) return;
     currentSlideIndex = index;
     lightbox.style.display = 'flex';
     showSlide(currentSlideIndex);
@@ -26,6 +27,7 @@ function openLightbox(index) {
 }
 
 function closeLightbox() {
+    if (!lightbox) return;
     lightbox.style.display = 'none';
     document.body.style.overflow = 'auto'; // Restore scrolling
 }
@@ -35,6 +37,7 @@ function changeSlide(n) {
 }
 
 function showSlide(n) {
+    if (!lightboxImg) return;
     if (n >= images.length) {
         currentSlideIndex = 0;
     } else if (n < 0) {
@@ -47,7 +50,7 @@ function showSlide(n) {
 
 // Keyboard controls
 document.addEventListener('keydown', function (event) {
-    if (lightbox.style.display === 'flex') {
+    if (lightbox && lightbox.style.display === 'flex') {
         if (event.key === 'ArrowLeft') {
             changeSlide(-1);
         } else if (event.key === 'ArrowRight') {
@@ -59,11 +62,13 @@ document.addEventListener('keydown', function (event) {
 });
 
 // Close on background click
-lightbox.addEventListener('click', (e) => {
-    if (e.target === lightbox) {
-        closeLightbox();
-    }
-});
+if (lightbox) {
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            closeLightbox();
+        }
+    });
+}
 
 // Show More / Show Less Logic
 function toggleGallery(galleryId, btn) {

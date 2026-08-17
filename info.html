@@ -4,21 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Info & Contacts - Lucashouse</title>
+    <title>Info e contatti - Lucashouse</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="styles/style.css">
-    <style>
-        .social-links a {
-            font-size: 1.5rem;
-            margin: 0 1rem;
-            color: var(--color-terracotta);
-            display: inline-block;
-        }
-    </style>
 </head>
 
 <body>
@@ -48,70 +41,131 @@
     </header>
 
     <main>
-        <section class="hero" style="height: 50vh;">
-            <div class="hero-content">
-                <h1>Info & Contacts</h1>
-                <p class="subtitle">Prenota il tuo soggiorno</p>
+        <section class="hero">
+            <div class="content-text">
+                <h1>Info e contatti</h1>
+                <p>Tutto quello che ti serve per raggiungerci, verificare la disponibilità e prenotare il tuo soggiorno
+                    sul Monte Amiata.</p>
             </div>
         </section>
 
-        <section class="container" style="padding-top: 4rem; padding-bottom: 4rem; text-align: center;">
-            <div class="contact-info"
-                style="font-size: 1.2rem; line-height: 2; border: 1px solid #ddd; padding: 2rem; display: inline-block; background: #fff; margin-bottom: 3rem;">
-                <h2>Book Now</h2>
-                <p><strong>Luca’s House - Podere Barbaglia</strong></p>
-                <p>58038 Pescina Seggiano (GR), Toscana</p>
-                <p>Tel: <a href="tel:+393388843720" style="color: var(--color-terracotta);">338 884 3720</a></p>
-                <p>Email: <a href="mailto:info@lucashouse.it"
-                        style="color: var(--color-terracotta);">info@lucashouse.it</a></p>
+        <!-- Secondary Navigation -->
+        <div class="secondary-nav-container">
+            <nav class="secondary-nav">
+                <a href="#come-arrivare">Come arrivare</a>
+                <a href="#calendario">Disponibilità</a>
+                <a href="#prezzi">Prezzi</a>
+                <a href="#contatti">Contatti</a>
+            </nav>
+        </div>
+
+        <!-- Come arrivare -->
+        <section id="come-arrivare" class="page-section container">
+            <div class="content-text">
+                <h2>Come arrivare</h2>
             </div>
+            <p class="address-line">
+                <i class="fa-solid fa-location-dot"></i>
+                Podere Barbaglia, 58038 Pescina Seggiano (GR)
+            </p>
+            <iframe class="map-embed"
+                src="https://maps.google.com/maps?q=Podere%20Barbaglia%20Pescina%20Seggiano%20GR&output=embed"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p class="map-link">
+                <a href="https://maps.app.goo.gl/DtzRwziYf6tn9GQH8" target="_blank" rel="noopener">Apri su Google
+                    Maps</a>
+            </p>
+        </section>
 
-            <hr
-                style="margin: 3rem auto; max-width: 200px; border-top: 2px solid var(--color-terracotta); opacity: 0.5;">
-
-            <!-- Availability Calendar -->
-            <div class="calendar-section" style="margin-bottom: 3rem;">
-                <h2>Disponibilità</h2>
-                <div
-                    style="background: #fdfbf7; padding: 2rem; border: 1px dashed #ccc; display: inline-block; width: 100%; max-width: 800px;">
-                    <p style="color: #666;">[Google Calendar Placeholder]</p>
-                    <p>Contattaci per confermare le date.</p>
-                    <!-- 
-                    <iframe src="YOUR_GOOGLE_CALENDAR_EMBED_LINK" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-                    -->
+        <!-- Calendario disponibilità -->
+        <section id="calendario" class="page-section container">
+            <div class="content-text">
+                <h2>Calendario disponibilità</h2>
+            </div>
+            <div class="calendar-grid">
+                <!--
+                    Per mostrare la disponibilità reale di Airbnb:
+                    1. In ogni annuncio Airbnb, esporta il link iCal (Impostazioni > Disponibilità > Sincronizza calendari).
+                    2. In Google Calendar crea un calendario per ogni appartamento e importa l'iCal di Airbnb.
+                    3. Rendi il calendario pubblico e incolla qui sotto il relativo link di embed (Impostazioni calendario > Integra il calendario).
+                    Sostituisci ogni .calendar-placeholder con un <iframe src="LINK_EMBED_GOOGLE_CALENDAR" ...></iframe>.
+                -->
+                <div class="calendar-card">
+                    <h3>Petra</h3>
+                    <div class="calendar-placeholder">[Collega qui il Google Calendar di Petra]</div>
+                </div>
+                <div class="calendar-card">
+                    <h3>Brezza</h3>
+                    <div class="calendar-placeholder">[Collega qui il Google Calendar di Brezza]</div>
+                </div>
+                <div class="calendar-card">
+                    <h3>Ciliegio</h3>
+                    <div class="calendar-placeholder">[Collega qui il Google Calendar di Ciliegio]</div>
+                </div>
+                <div class="calendar-card">
+                    <h3>Fonte</h3>
+                    <div class="calendar-placeholder">[Collega qui il Google Calendar di Fonte]</div>
                 </div>
             </div>
+            <p class="calendar-note">
+                I calendari mostrano le date già occupate. Per una conferma in tempo reale ti invitiamo comunque a
+                contattarci direttamente.
+            </p>
+        </section>
 
-            <hr
-                style="margin: 3rem auto; max-width: 200px; border-top: 2px solid var(--color-terracotta); opacity: 0.5;">
-
-            <!-- Google Map -->
-            <div class="map-section" style="margin-bottom: 3rem;">
-                <h2>Dove siamo</h2>
-                <div style="width: 100%; height: 400px; background: #eee; margin-top: 1rem;">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2936.7865245843236!2d11.5649999!3d42.9249999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13297a7a1a1a1a1a%3A0x1a1a1a1a1a1a1a1a!2sPescina%20Seggiano!5e0!3m2!1sit!2sit!4v1600000000000!5m2!1sit!2sit"
-                        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
-                    </iframe>
-                    <!-- Revert to basic link if embed fails validation/api key needs -->
-                    <p style="margin-top: 1rem;"><a href="https://maps.app.goo.gl/DtzRwziYf6tn9GQH8" target="_blank"
-                            style="text-decoration: underline;">Apri su Google Maps</a></p>
-                </div>
+        <!-- Prezzi -->
+        <section id="prezzi" class="page-section container">
+            <div class="content-text">
+                <h2>Prezzi</h2>
             </div>
-
-            <hr
-                style="margin: 3rem auto; max-width: 200px; border-top: 2px solid var(--color-terracotta); opacity: 0.5;">
-
-            <!-- Social Links -->
-            <div class="social-section">
-                <h2>Seguici</h2>
-                <div class="social-links" style="margin-top: 1.5rem;">
-                    <a href="#" target="_blank">Airbnb</a>
-                    <a href="#" target="_blank">Instagram</a>
-                    <a href="#" target="_blank">Facebook</a>
-                </div>
+            <div class="prices-text">
+                <p>I prezzi variano in base alla stagione, alla disponibilità e alla domanda per le date selezionate. Le
+                    tariffe vengono aggiornate dinamicamente durante tutto l’anno.</p>
+                <p>Per prezzi aggiornati e accurati in tempo reale, puoi consultare il calendario su Airbnb.</p>
+                <p>Gli ospiti che prenotano direttamente con noi possono beneficiare di uno sconto speciale per la
+                    prenotazione diretta di circa il 15%, oltre a possibili riduzioni per soggiorni più lunghi o
+                    prenotazioni anticipate.</p>
+                <p>Se desideri verificare la disponibilità o ricevere un preventivo, non esitare a contattarci
+                    direttamente.</p>
             </div>
+            <!-- TODO: sostituire ogni "#" con l'URL dell'annuncio Airbnb del rispettivo appartamento -->
+            <div class="prices-cta">
+                <a href="#" target="_blank" rel="noopener" class="cta-button">
+                    <i class="fa-brands fa-airbnb"></i> Vedi Petra su Airbnb
+                </a>
+                <a href="#" target="_blank" rel="noopener" class="cta-button">
+                    <i class="fa-brands fa-airbnb"></i> Vedi Brezza su Airbnb
+                </a>
+                <a href="#" target="_blank" rel="noopener" class="cta-button">
+                    <i class="fa-brands fa-airbnb"></i> Vedi Ciliegio su Airbnb
+                </a>
+                <a href="#" target="_blank" rel="noopener" class="cta-button">
+                    <i class="fa-brands fa-airbnb"></i> Vedi Fonte su Airbnb
+                </a>
+            </div>
+        </section>
 
+        <!-- Contatti -->
+        <section id="contatti" class="page-section container">
+            <div class="content-text">
+                <h2>Contatti</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-details">
+                    <p><strong>Luca, Toscana</strong></p>
+                    <p><i class="fa-solid fa-phone"></i> Tel: <a href="tel:+393388843720">338 884 3720</a></p>
+                    <p><i class="fa-solid fa-envelope"></i> Email: <a
+                            href="mailto:info@lucashouse.it">info@lucashouse.it</a></p>
+                    <p><i class="fa-solid fa-location-dot"></i> Podere Barbaglia, 58038 Pescina Seggiano (GR)</p>
+                </div>
+                <!-- TODO: sostituire YOUR_FORM_ID con l'ID Formspree reale -->
+                <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <input type="text" name="name" placeholder="Nome" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <textarea name="message" placeholder="Messaggio" required></textarea>
+                    <button type="submit" class="cta-button">Invia</button>
+                </form>
+            </div>
         </section>
     </main>
 
@@ -120,6 +174,26 @@
     </footer>
 
     <script src="scripts/main.js"></script>
+    <script>
+        // Active link switching for secondary nav
+        const sections = document.querySelectorAll("section");
+        const navLi = document.querySelectorAll(".secondary-nav a");
+        window.onscroll = () => {
+            var current = "";
+            sections.forEach((section) => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= sectionTop - 150) {
+                    current = section.getAttribute("id");
+                }
+            });
+            navLi.forEach((li) => {
+                li.classList.remove("active");
+                if (li.getAttribute("href").includes(current)) {
+                    li.classList.add("active");
+                }
+            });
+        };
+    </script>
 </body>
 
 </html>

@@ -647,3 +647,281 @@ html {
 .page-section:last-child {
     border-bottom: none;
 }
+
+/* ===== Apartments: subtitle, specs, services ===== */
+.apartment-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.25rem;
+    color: var(--color-terracotta);
+    margin-top: -1rem;
+    margin-bottom: var(--spacing-md);
+}
+
+/* 4 spec boxes with icons */
+.apartment-specs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-md);
+    max-width: 800px;
+    margin: 0 auto var(--spacing-lg);
+}
+
+.spec-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+    padding: var(--spacing-md) var(--spacing-sm);
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    text-align: center;
+}
+
+.spec-box i {
+    font-size: 1.8rem;
+    color: var(--color-terracotta);
+}
+
+.spec-num {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-olive-dark);
+    line-height: 1;
+}
+
+.spec-label {
+    font-size: 0.9rem;
+    color: var(--color-stone-gray);
+}
+
+/* Services */
+.apartment-services {
+    max-width: 900px;
+    margin: 0 auto var(--spacing-lg);
+    padding: 0 var(--spacing-md);
+}
+
+.apartment-services h3 {
+    text-align: center;
+    color: var(--color-olive-dark);
+    margin-bottom: var(--spacing-md);
+}
+
+.service-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.service-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #fff;
+    border: 1px solid #e5ddc5;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    color: var(--color-stone-gray);
+}
+
+.service-item i {
+    color: var(--color-terracotta);
+}
+
+.service-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem 1.5rem;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.service-list li {
+    position: relative;
+    padding-left: 1.2rem;
+    font-size: 0.9rem;
+    color: var(--color-stone-gray);
+}
+
+.service-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--color-terracotta);
+    font-weight: 700;
+}
+
+/* ===== Info page: map, calendars, contacts ===== */
+.section-heading {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.address-line {
+    text-align: center;
+    font-size: 1.15rem;
+    margin-bottom: var(--spacing-lg);
+    color: var(--color-stone-gray);
+}
+
+.map-embed {
+    width: 100%;
+    max-width: 900px;
+    height: 400px;
+    margin: 0 auto;
+    border: 0;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.map-link {
+    text-align: center;
+    margin-top: var(--spacing-md);
+}
+
+.map-link a {
+    color: var(--color-terracotta);
+    text-decoration: underline;
+}
+
+/* Calendar grid: 2x2 */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.calendar-card {
+    background: #fff;
+    border: 1px solid #e5ddc5;
+    border-radius: 8px;
+    padding: var(--spacing-md);
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.calendar-card h3 {
+    color: var(--color-terracotta);
+    margin-bottom: var(--spacing-md);
+}
+
+.calendar-placeholder {
+    background: #fdfbf7;
+    border: 1px dashed #ccc;
+    border-radius: 6px;
+    padding: 3rem 1rem;
+    color: #777;
+    font-size: 0.95rem;
+}
+
+.calendar-note {
+    max-width: 800px;
+    margin: var(--spacing-lg) auto 0;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Prices */
+.prices-text {
+    max-width: 800px;
+    margin: 0 auto var(--spacing-lg);
+}
+
+.prices-text p {
+    margin-bottom: var(--spacing-md);
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.prices-cta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-md);
+}
+
+/* Contacts: two columns */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+.contact-details {
+    font-size: 1.1rem;
+    line-height: 2;
+}
+
+.contact-details a {
+    color: var(--color-terracotta);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #d8cfb4;
+    border-radius: 4px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    background: #fff;
+    color: var(--color-stone-gray);
+}
+
+.contact-form textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--color-terracotta);
+}
+
+.contact-form button {
+    align-self: flex-start;
+    cursor: pointer;
+}
+
+/* Info page responsive */
+@media (max-width: 768px) {
+    .apartment-specs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .calendar-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .contact-form button {
+        align-self: stretch;
+    }
+}
