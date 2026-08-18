@@ -122,3 +122,29 @@ function initGalleries() {
 
 window.addEventListener('load', initGalleries);
 window.addEventListener('resize', initGalleries); // Re-check on resize
+
+// Reveal-on-scroll (progressive enhancement)
+function initReveal() {
+    const targets = document.querySelectorAll('main > section, .page-section, .footer-grid');
+
+    // If IntersectionObserver isn't available, show everything immediately.
+    if (!('IntersectionObserver' in window) || targets.length === 0) {
+        targets.forEach(el => el.classList.add('is-visible'));
+        return;
+    }
+
+    targets.forEach(el => el.classList.add('reveal'));
+
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                obs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    targets.forEach(el => observer.observe(el));
+}
+
+window.addEventListener('DOMContentLoaded', initReveal);
