@@ -3,8 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apartments - Lucashouse</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#fbf2d2">
+    <meta name="description"
+        content="I quattro appartamenti di Lucashouse — Petra, Brezza, Ciliegio e Fonte — con sauna, idromassaggio e piscina sul Monte Amiata.">
+    <title>Appartamenti - Lucashouse</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -15,12 +18,13 @@
 </head>
 
 <body>
+    <a class="skip-link" href="#main">Vai al contenuto</a>
     <header>
-        <div class="container-fluid" style="padding: 1rem 0;">
+        <div class="header-inner">
             <a href="index.html" class="logo">Lucashouse</a>
             <span class="logo-subtitle">Monte Amiata unveiled</span>
 
-            <nav class="accordion-nav">
+            <nav class="accordion-nav" aria-label="Navigazione principale">
                 <a href="index.html" class="nav-item">
                     <span class="nav-text">Home</span>
                 </a>
@@ -40,7 +44,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="main">
         <section class="hero">
             <div class="content-text">
                 <h1>Appartamenti</h1>
@@ -54,15 +58,11 @@
                     Tutto intorno il fresco giardino con svariati angoli arredati, poco oltre, i boschi.
                 </p>
             </div>
-
-
-
-
         </section>
 
         <!-- Secondary Navigation -->
         <div class="secondary-nav-container">
-            <nav class="secondary-nav">
+            <nav class="secondary-nav" aria-label="Appartamenti">
                 <a href="#petra">Petra</a>
                 <a href="#brezza">Brezza</a>
                 <a href="#ciliegio">Ciliegio</a>
@@ -121,10 +121,12 @@
             <div class="content-gallery">
                 <div class="gallery-container">
                     <div class="gallery-grid collapsed" id="gallery-petra">
-                        <img src="assets/nav/nav_la_casa.jpg" alt="Petra 1" class="gallery-img">
+                        <img src="assets/nav/nav_la_casa.jpg" alt="Appartamento Petra" class="gallery-img"
+                            loading="lazy" decoding="async">
                         <!-- altre immagini reali da inserire -->
                     </div>
-                    <button class="show-more-btn" onclick="toggleGallery('gallery-petra', this)">Mostra di più</button>
+                    <button type="button" class="show-more-btn" aria-controls="gallery-petra" aria-expanded="false"
+                        onclick="toggleGallery('gallery-petra', this)">Mostra di più</button>
                 </div>
             </div>
         </section>
@@ -181,11 +183,14 @@
             <div class="content-gallery">
                 <div class="gallery-container">
                     <div class="gallery-grid collapsed" id="gallery-brezza">
-                        <img src="assets/nav/nav_la_casa.jpg" alt="Brezza 1" class="gallery-img">
-                        <img src="assets/nav/nav_la_casa.jpg" alt="Brezza 2" class="gallery-img">
+                        <img src="assets/nav/nav_la_casa.jpg" alt="Appartamento Brezza" class="gallery-img"
+                            loading="lazy" decoding="async">
+                        <img src="assets/nav/nav_la_casa.jpg" alt="Giardino privato del Brezza" class="gallery-img"
+                            loading="lazy" decoding="async">
                         <!-- altre immagini reali da inserire -->
                     </div>
-                    <button class="show-more-btn" onclick="toggleGallery('gallery-brezza', this)">Mostra di più</button>
+                    <button type="button" class="show-more-btn" aria-controls="gallery-brezza" aria-expanded="false"
+                        onclick="toggleGallery('gallery-brezza', this)">Mostra di più</button>
                 </div>
             </div>
         </section>
@@ -238,11 +243,12 @@
             <div class="content-gallery">
                 <div class="gallery-container">
                     <div class="gallery-grid collapsed" id="gallery-ciliegio">
-                        <img src="assets/nav/nav_la_casa.jpg" alt="Ciliegio 1" class="gallery-img">
+                        <img src="assets/nav/nav_la_casa.jpg" alt="Appartamento Ciliegio" class="gallery-img"
+                            loading="lazy" decoding="async">
                         <!-- altre immagini reali da inserire -->
                     </div>
-                    <button class="show-more-btn" onclick="toggleGallery('gallery-ciliegio', this)">Mostra di
-                        più</button>
+                    <button type="button" class="show-more-btn" aria-controls="gallery-ciliegio" aria-expanded="false"
+                        onclick="toggleGallery('gallery-ciliegio', this)">Mostra di più</button>
                 </div>
             </div>
         </section>
@@ -297,10 +303,12 @@
             <div class="content-gallery">
                 <div class="gallery-container">
                     <div class="gallery-grid collapsed" id="gallery-fonte">
-                        <img src="assets/nav/nav_la_casa.jpg" alt="Fonte 1" class="gallery-img">
+                        <img src="assets/nav/nav_la_casa.jpg" alt="Appartamento Fonte" class="gallery-img"
+                            loading="lazy" decoding="async">
                         <!-- altre immagini reali da inserire -->
                     </div>
-                    <button class="show-more-btn" onclick="toggleGallery('gallery-fonte', this)">Mostra di più</button>
+                    <button type="button" class="show-more-btn" aria-controls="gallery-fonte" aria-expanded="false"
+                        onclick="toggleGallery('gallery-fonte', this)">Mostra di più</button>
                 </div>
             </div>
         </section>
@@ -314,7 +322,8 @@
             </div>
             <div class="content-gallery">
                 <div class="gallery-grid">
-                    <img src="assets/nav/nav_la_casa.jpg" alt="Relax 1" class="gallery-img">
+                    <img src="assets/nav/nav_la_casa.jpg" alt="Area relax con sauna e idromassaggio"
+                        class="gallery-img" loading="lazy" decoding="async">
                 </div>
             </div>
         </section>
@@ -359,34 +368,24 @@
     </footer>
 
     <!-- Lightbox Modal -->
-    <div id="lightbox" class="lightbox">
-        <span class="close" onclick="closeLightbox()">&times;</span>
-        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-        <img class="lightbox-content" id="lightbox-img">
-        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Galleria fotografica">
+        <button type="button" class="close" aria-label="Chiudi la galleria">&times;</button>
+        <button type="button" class="prev" aria-label="Foto precedente">&#10094;</button>
+        <img class="lightbox-content" id="lightbox-img" alt="">
+        <button type="button" class="next" aria-label="Foto successiva">&#10095;</button>
+        <p class="lightbox-counter" id="lightbox-counter" aria-live="polite"></p>
     </div>
 
+    <!-- Barra contatti rapidi (solo mobile) -->
+    <nav class="mobile-cta" aria-label="Contatti rapidi">
+        <a href="tel:+393388843720"><i class="fa-solid fa-phone" aria-hidden="true"></i><span>Chiama</span></a>
+        <a href="mailto:info@lucashouse.it"><i class="fa-solid fa-envelope"
+                aria-hidden="true"></i><span>Email</span></a>
+        <a href="info.html#calendario" class="is-primary"><i class="fa-regular fa-calendar-check"
+                aria-hidden="true"></i><span>Disponibilità</span></a>
+    </nav>
+
     <script src="scripts/main.js"></script>
-    <script>
-        // Active link switching for secondary nav
-        const sections = document.querySelectorAll("section");
-        const navLi = document.querySelectorAll(".secondary-nav a");
-        window.onscroll = () => {
-            var current = "";
-            sections.forEach((section) => {
-                const sectionTop = section.offsetTop;
-                if (scrollY >= sectionTop - 150) {
-                    current = section.getAttribute("id");
-                }
-            });
-            navLi.forEach((li) => {
-                li.classList.remove("active");
-                if (li.getAttribute("href").includes(current)) {
-                    li.classList.add("active");
-                }
-            });
-        };
-    </script>
 </body>
 
 </html>

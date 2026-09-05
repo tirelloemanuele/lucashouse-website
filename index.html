@@ -3,7 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#fbf2d2">
+    <meta name="description"
+        content="Lucashouse, antico podere in pietra a Pescina di Seggiano sul Monte Amiata: appartamenti, sauna, idromassaggio e natura toscana.">
     <title>Lucashouse - Agriturismo in Toscana</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,12 +18,13 @@
 </head>
 
 <body>
+    <a class="skip-link" href="#main">Vai al contenuto</a>
     <header>
-        <div class="container-fluid" style="padding: 1rem 0;">
+        <div class="header-inner">
             <a href="index.html" class="logo">Lucashouse</a>
             <span class="logo-subtitle">Monte Amiata unveiled</span>
 
-            <nav class="accordion-nav">
+            <nav class="accordion-nav" aria-label="Navigazione principale">
                 <a href="index.html" class="nav-item active" aria-current="page">
                     <span class="nav-text">Home</span>
                 </a>
@@ -40,7 +44,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="main">
         <!-- Text Section 1 -->
         <section class="hero">
             <div class="content-text">
@@ -64,17 +68,27 @@
         <section class="content-gallery">
             <div class="gallery-container">
                 <div class="gallery-grid collapsed" id="gallery1">
-                    <img src="assets/1. Home/Home-s1-1.jpg" alt="Lucashouse view 1" class="gallery-img">
-                    <img src="assets/1. Home/Home-s1-2.jpg" alt="Lucashouse view 2" class="gallery-img">
-                    <img src="assets/1. Home/Home-s1-3.jpg" alt="Lucashouse view 3" class="gallery-img">
-                    <img src="assets/1. Home/Home-s1-4.jpg" alt="Lucashouse view 4" class="gallery-img">
-                    <img src="assets/1. Home/Home-s1-5.jpg" alt="Lucashouse view 5" class="gallery-img">
-                    <img src="assets/1. Home/Home-s1-6.jpg" alt="Lucashouse view 6" class="gallery-img">
-                    <img src="assets/1. Home/Home-s1-7.jpg" alt="Lucashouse view 7" class="gallery-img">
-                    <img src="assets/1. Home/Home-s1-8.jpg" alt="Lucashouse view 8" class="gallery-img">
-                    <img src="assets/1. Home/Home-s1-9.jpeg" alt="Lucashouse view 9" class="gallery-img">
+                    <img src="assets/1. Home/Home-s1-1.jpg" alt="Il podere in pietra visto dal giardino"
+                        class="gallery-img" decoding="async">
+                    <img src="assets/1. Home/Home-s1-2.jpg" alt="Scorcio del borgo di Lucashouse" class="gallery-img"
+                        decoding="async">
+                    <img src="assets/1. Home/Home-s1-3.jpg" alt="Dettaglio delle murature in pietra"
+                        class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/1. Home/Home-s1-4.jpg" alt="Angolo del giardino attrezzato" class="gallery-img"
+                        loading="lazy" decoding="async">
+                    <img src="assets/1. Home/Home-s1-5.jpg" alt="Veduta della struttura" class="gallery-img"
+                        loading="lazy" decoding="async">
+                    <img src="assets/1. Home/Home-s1-6.jpg" alt="Interni dell'antico podere" class="gallery-img"
+                        loading="lazy" decoding="async">
+                    <img src="assets/1. Home/Home-s1-7.jpg" alt="Spazi comuni all'aperto" class="gallery-img"
+                        loading="lazy" decoding="async">
+                    <img src="assets/1. Home/Home-s1-8.jpg" alt="Il podere al tramonto" class="gallery-img"
+                        loading="lazy" decoding="async">
+                    <img src="assets/1. Home/Home-s1-9.jpeg" alt="Vista sulle colline circostanti" class="gallery-img"
+                        loading="lazy" decoding="async">
                 </div>
-                <button class="show-more-btn" onclick="toggleGallery('gallery1', this)">Mostra di più</button>
+                <button type="button" class="show-more-btn" aria-controls="gallery1" aria-expanded="false"
+                    onclick="toggleGallery('gallery1', this)">Mostra di più</button>
             </div>
         </section>
 
@@ -107,22 +121,19 @@
         <section class="content-gallery">
             <div class="gallery-container">
                 <div class="gallery-grid collapsed" id="gallery2">
-                    <img src="assets/1. Home/Home-s2-1.jpg" alt="Nature view 1" class="gallery-img">
-                    <img src="assets/1. Home/Home-s2-2.jpg" alt="Nature view 2" class="gallery-img">
-                    <img src="assets/1. Home/Home-s2-3.jpg" alt="Nature view 3" class="gallery-img">
-                    <img src="assets/1. Home/Home-s2-4.jpg" alt="Nature view 4" class="gallery-img">
+                    <img src="assets/1. Home/Home-s2-1.jpg" alt="Boschi di pini e castagni intorno al podere"
+                        class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/1. Home/Home-s2-2.jpg" alt="Campi coltivati biologicamente" class="gallery-img"
+                        loading="lazy" decoding="async">
+                    <img src="assets/1. Home/Home-s2-3.jpg" alt="Sentiero nella natura del Monte Amiata"
+                        class="gallery-img" loading="lazy" decoding="async">
+                    <img src="assets/1. Home/Home-s2-4.jpg" alt="Paesaggio toscano al tramonto" class="gallery-img"
+                        loading="lazy" decoding="async">
                 </div>
-                <button class="show-more-btn" onclick="toggleGallery('gallery2', this)">Mostra di più</button>
+                <button type="button" class="show-more-btn" aria-controls="gallery2" aria-expanded="false"
+                    onclick="toggleGallery('gallery2', this)">Mostra di più</button>
             </div>
         </section>
-
-        <!-- Lightbox Modal -->
-        <div id="lightbox" class="lightbox">
-            <span class="close" onclick="closeLightbox()">&times;</span>
-            <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
-            <img class="lightbox-content" id="lightbox-img">
-            <span class="next" onclick="changeSlide(1)">&#10095;</span>
-        </div>
     </main>
 
     <footer>
@@ -161,6 +172,24 @@
             <p class="footer-legal">Codice Fiscale: [inserire C.F.] &middot; CIN: [inserire CIN]</p>
         </div>
     </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Galleria fotografica">
+        <button type="button" class="close" aria-label="Chiudi la galleria">&times;</button>
+        <button type="button" class="prev" aria-label="Foto precedente">&#10094;</button>
+        <img class="lightbox-content" id="lightbox-img" alt="">
+        <button type="button" class="next" aria-label="Foto successiva">&#10095;</button>
+        <p class="lightbox-counter" id="lightbox-counter" aria-live="polite"></p>
+    </div>
+
+    <!-- Barra contatti rapidi (solo mobile) -->
+    <nav class="mobile-cta" aria-label="Contatti rapidi">
+        <a href="tel:+393388843720"><i class="fa-solid fa-phone" aria-hidden="true"></i><span>Chiama</span></a>
+        <a href="mailto:info@lucashouse.it"><i class="fa-solid fa-envelope"
+                aria-hidden="true"></i><span>Email</span></a>
+        <a href="info.html#calendario" class="is-primary"><i class="fa-regular fa-calendar-check"
+                aria-hidden="true"></i><span>Disponibilità</span></a>
+    </nav>
 
     <script src="scripts/main.js"></script>
 </body>

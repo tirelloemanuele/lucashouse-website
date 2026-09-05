@@ -3,8 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Surroundings - Lucashouse</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#fbf2d2">
+    <meta name="description"
+        content="Cosa vedere intorno a Lucashouse: natura e borghi del Monte Amiata, terme, luoghi sacri e città d'arte della Val d'Orcia.">
+    <title>Dintorni - Lucashouse</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -15,12 +18,13 @@
 </head>
 
 <body>
+    <a class="skip-link" href="#main">Vai al contenuto</a>
     <header>
-        <div class="container-fluid" style="padding: 1rem 0;">
+        <div class="header-inner">
             <a href="index.html" class="logo">Lucashouse</a>
             <span class="logo-subtitle">Monte Amiata unveiled</span>
 
-            <nav class="accordion-nav">
+            <nav class="accordion-nav" aria-label="Navigazione principale">
                 <a href="index.html" class="nav-item">
                     <span class="nav-text">Home</span>
                 </a>
@@ -40,7 +44,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="main">
         <section class="hero">
             <div class="content-text">
                 <h1>Dintorni</h1>
@@ -54,7 +58,7 @@
 
         <!-- Secondary Navigation -->
         <div class="secondary-nav-container">
-            <nav class="secondary-nav">
+            <nav class="secondary-nav" aria-label="Sezioni della pagina">
                 <a href="#natura">Natura</a>
                 <a href="#terme">Terme</a>
                 <a href="#sacri">Luoghi Sacri</a>
@@ -88,7 +92,8 @@
             </div>
             <div class="content-gallery">
                 <div class="gallery-grid">
-                    <img src="assets/nav/nav_dintorni.jpg" alt="Natura 1" class="gallery-img">
+                    <img src="assets/nav/nav_dintorni.jpg" alt="Borghi e natura del Monte Amiata" class="gallery-img"
+                        loading="lazy" decoding="async">
                 </div>
             </div>
         </section>
@@ -115,7 +120,8 @@
             </div>
             <div class="content-gallery">
                 <div class="gallery-grid">
-                    <img src="assets/nav/nav_dintorni.jpg" alt="Terme 1" class="gallery-img">
+                    <img src="assets/nav/nav_dintorni.jpg" alt="Terme e fiumi della zona" class="gallery-img" loading="lazy"
+                        decoding="async">
                 </div>
             </div>
         </section>
@@ -144,7 +150,8 @@
             </div>
             <div class="content-gallery">
                 <div class="gallery-grid">
-                    <img src="assets/nav/nav_dintorni.jpg" alt="Sacri 1" class="gallery-img">
+                    <img src="assets/nav/nav_dintorni.jpg" alt="Luoghi sacri dell'Amiata" class="gallery-img" loading="lazy"
+                        decoding="async">
                 </div>
             </div>
         </section>
@@ -173,7 +180,8 @@
             </div>
             <div class="content-gallery">
                 <div class="gallery-grid">
-                    <img src="assets/nav/nav_dintorni.jpg" alt="Arte 1" class="gallery-img">
+                    <img src="assets/nav/nav_dintorni.jpg" alt="Città d'arte della Val d'Orcia" class="gallery-img"
+                        loading="lazy" decoding="async">
                 </div>
             </div>
         </section>
@@ -217,34 +225,24 @@
     </footer>
 
     <!-- Lightbox Modal -->
-    <div id="lightbox" class="lightbox">
-        <span class="close" onclick="closeLightbox()">&times;</span>
-        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-        <img class="lightbox-content" id="lightbox-img">
-        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Galleria fotografica">
+        <button type="button" class="close" aria-label="Chiudi la galleria">&times;</button>
+        <button type="button" class="prev" aria-label="Foto precedente">&#10094;</button>
+        <img class="lightbox-content" id="lightbox-img" alt="">
+        <button type="button" class="next" aria-label="Foto successiva">&#10095;</button>
+        <p class="lightbox-counter" id="lightbox-counter" aria-live="polite"></p>
     </div>
 
+    <!-- Barra contatti rapidi (solo mobile) -->
+    <nav class="mobile-cta" aria-label="Contatti rapidi">
+        <a href="tel:+393388843720"><i class="fa-solid fa-phone" aria-hidden="true"></i><span>Chiama</span></a>
+        <a href="mailto:info@lucashouse.it"><i class="fa-solid fa-envelope"
+                aria-hidden="true"></i><span>Email</span></a>
+        <a href="info.html#calendario" class="is-primary"><i class="fa-regular fa-calendar-check"
+                aria-hidden="true"></i><span>Disponibilità</span></a>
+    </nav>
+
     <script src="scripts/main.js"></script>
-    <script>
-        // Active link switching for secondary nav
-        const sections = document.querySelectorAll("section");
-        const navLi = document.querySelectorAll(".secondary-nav a");
-        window.onscroll = () => {
-            var current = "";
-            sections.forEach((section) => {
-                const sectionTop = section.offsetTop;
-                if (scrollY >= sectionTop - 150) {
-                    current = section.getAttribute("id");
-                }
-            });
-            navLi.forEach((li) => {
-                li.classList.remove("active");
-                if (li.getAttribute("href").includes(current)) {
-                    li.classList.add("active");
-                }
-            });
-        };
-    </script>
 </body>
 
 </html>
